@@ -102,7 +102,12 @@
             const ss = ()=>{
                 slide.style.transition = "left 1.5s";   
                             
-                slide.style.left =areaWidth;               
+                const area = document.getElementById("slideArea");
+                console.log( areaWidth );
+                let areaWidth = parseInt(area.style.width); //parseInt(숫자+문자에서 숫자만 가져오면서 Number형이 됨);
+                console.log( areaWidth );
+                areaWidth = (areaWidth * (-1) ) + "px"; 
+                console.log( areaWidth );               
                 
                 //콜백함수(윗쪽 프로그램 2개 실행이 끝난후 작동되어야 하니까)
                 setTimeout( po , 1500);
