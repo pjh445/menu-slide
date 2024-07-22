@@ -94,14 +94,11 @@
             /*******************/
             const slide = document.getElementById("slide");            
 
-            const area = document.getElementById("slideArea");
-            console.log( area );
-            let areaWidth = area.style.width;
-            console.log( areaWidth );
-            //areaWidth = parseInt(areaWidth); //parseInt(숫자+문자에서 숫자만 가져오면서 Number형이 됨);
-            //console.log( areaWidth );
-            //areaWidth = (areaWidth * (-1) ) + "px"; 
-            //console.log( areaWidth );
+             const area = document.getElementById("slideArea");                      
+             let areaWidth = area.clientWidth;    
+             areaWidth = parseInt(areaWidth); //parseInt(숫자+문자에서 숫자만 가져오면서 Number형이 됨);            
+             areaWidth = (areaWidth * (-1) ) + "px";            
+             console.log( areaWidth );
 
             const ss = ()=>{
                 slide.style.transition = "left 1.5s";   
