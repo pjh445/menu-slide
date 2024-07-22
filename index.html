@@ -92,13 +92,15 @@
             $btn.addEventListener("click", nav );
 
             /*******************/
-            const slide = document.getElementById("slide");            
-
-             const area = document.getElementById("slideArea");                      
-             let pos = area.clientWidth;    
-             pos = parseInt(pos); //parseInt(숫자+문자에서 숫자만 가져오면서 Number형이 됨);            
-             pos = (pos * (-1) ) + "px";            
-             console.log( pos  + typeof pos );
+            const slide = document.getElementById("slide"); 
+            const img = document.querySelector("#slide img");   
+            const area = document.getElementById("slideArea");  
+            
+            let pos = area.clientWidth;
+            console.log( pos );
+            img.style.width = pos;
+            pos = parseInt(pos); //parseInt(숫자+문자에서 숫자만 가져오면서 Number형이 됨);            
+            pos = (pos * (-1) ) + "px";           
 
             const ss = ()=>{
                 slide.style.transition = "left 1.5s";                               
