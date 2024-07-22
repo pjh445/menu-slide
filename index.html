@@ -107,10 +107,10 @@
                 slide.style.transition = "left 1.5s";   
                             
                 const area = document.getElementById("slideArea");  
-                alert( area );
+                console.log( area );
                 let areaWidth = area.style.width;           
-                areaWidth = parseInt(areaWidth); //parseInt(숫자+문자에서 숫자만 가져오면서 Number형이 됨);            
-                areaWidth = (areaWidth * (-1) ) + "px";            
+                //areaWidth = parseInt(areaWidth); //parseInt(숫자+문자에서 숫자만 가져오면서 Number형이 됨);            
+                //areaWidth = (areaWidth * (-1) ) + "px";            
                 console.log( areaWidth );             
                 
                 //콜백함수(윗쪽 프로그램 2개 실행이 끝난후 작동되어야 하니까)
