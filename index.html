@@ -93,13 +93,16 @@
 
             /*******************/
             const slide = document.getElementById("slide"); 
-            const img = document.querySelector("#slide img");   
+            const img = document.querySelectorAll("#slide img");
             const area = document.getElementById("slideArea");  
             
             let pos = area.clientWidth;
             console.log( pos );
-            img.style.width = pos + "px";             
-            pos = (pos * (-1) ) + "px";           
+            img.forEach( i => {
+                i.style.width = pos + "px";
+            });    
+            
+            pos = (pos * (-1) ) + "px";   
 
             const ss = ()=>{
                 slide.style.transition = "left 1.5s";                               
