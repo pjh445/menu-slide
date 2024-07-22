@@ -106,7 +106,8 @@
             const ss = ()=>{
                 slide.style.transition = "left 1.5s";   
                             
-                const area = document.getElementById("slideArea");            
+                const area = document.getElementById("slideArea");  
+                alert( area );
                 let areaWidth = area.style.width;           
                 areaWidth = parseInt(areaWidth); //parseInt(숫자+문자에서 숫자만 가져오면서 Number형이 됨);            
                 areaWidth = (areaWidth * (-1) ) + "px";            
