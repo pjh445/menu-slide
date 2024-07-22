@@ -95,13 +95,13 @@
             const slide = document.getElementById("slide");            
 
             const area = document.getElementById("slideArea");
-            //const areaWidth = area.style.width;
-            //alert( area.style.width );
+            const areaWidth = area.style.width;
+            console.log( areaWidth );
 
             const ss = ()=>{
                 slide.style.transition = "left 1.5s";   
                             
-                slide.style.left = "-100%";               
+                slide.style.left =areaWidth * (-1);               
                 
                 //콜백함수(윗쪽 프로그램 2개 실행이 끝난후 작동되어야 하니까)
                 setTimeout( po , 1500);
